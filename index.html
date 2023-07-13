@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Best TODO App</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<!-- 
+
+		Lists - Groups of todos
+			- Youtube
+			- At some website
+			- through the day
+		Functionalities
+			- Adding new lists
+			- Adding todos to this lists
+			- Marking todo as complete/Incomplete
+			- Deleting a todo
+			- Deleting a list
+ 	-->
+
+ 	<!-- Idea -> SKetch -> Prototype -> Design -> Application -->
+
+ 	<main class="main">
+ 		<h1>My Best TODO App</h1>
+ 		<div class="card row">
+ 			<div class="col-4">
+ 				<h2 class="lists-heading">Lists</h2>
+ 				<div class="lists-holder">
+ 					<ul class="list" id="list">
+ 						<!-- <li class="list-item active">My Day's Todos</li> -->
+						<p>No lists yet, add some!</p>
+ 					</ul>
+ 				</div>
+ 				<div class="todo-input">
+					<form id="list-form">
+						<input id="list-input" type="text" placeholder="Enter list name here" required>
+						<button type="submit">
+							Add List
+						</button>
+					</form>
+				</div>
+ 			</div>
+ 			<div class="col-8">
+ 				<div class="todos-holder">
+ 					<div class="todos-title">
+ 						<h3 id="list-title">Select List</h3>
+						<button class="btn-close" onclick="deselectActiveList()">close</button>
+					</div>
+
+					<div class="todos-body">
+
+						<div class="status-holder">
+							<div class="row">
+								<div class="col-30 tab" id="tab-1" onclick="activateTab('tab-1')">
+									<h4>All</h4>
+								</div>
+								<div class="col-30 tab" id="tab-2" onclick="activateTab('tab-2')">
+									<h4>InComplete</h4>
+								</div>
+								<div class="col-30 tab" id="tab-3" onclick="activateTab('tab-3')">
+									<h4>Complete</h4>
+								</div>
+							</div>
+						</div>
+
+						<ol class="todos" id="todos">
+							<!-- <li class="todo-item">
+								<p>Todo number one</p>
+								<div class="item-actions">
+									<button class="btn btn-done">Done</button>
+									<button class="btn btn-delete">Delete</button>
+								</div>
+							</li> -->
+						</ol>
+					</div>
+
+					<div class="todo-input">
+						<form id="todo-form">
+							<input id="todo-input" type="text" name="" placeholder="Enter task here">
+							<button type="submit">
+								Add
+							</button>
+						</form>
+					</div>
+
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</main>
+
+ 	<script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap');
+
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root{
+/*	--gradient: linear-gradient(-45deg, pink, purple);*/
+	--gradient: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+body{
+	background: var(--gradient);
+	height: 100vh;
+	font-family: 'Nunito', sans-serif;
+}
+
+.main{
+	width: min(100% - 3rem, 1000px);
+	margin: auto;
+	padding: 50px 0;
+	height: calc(100% - 60px);
+}
+
+.main h1{
+	text-align: center;
+	margin-bottom: 10px;
+	color: white;
+	height: 60px;
+	font-size: 44px;
+}
+
+
+.main .card{
+	background: white;
+	padding: 30px 30px;
+	border-radius: 20px;
+	height: 100%;
+}
+
+.main .row{
+	display: flex;
+	gap: 2px;
+}
+
+.col-4{
+	width: 40%;
+	padding-right: 20px;
+	height: 100%;
+}
+
+.col-4 h2{
+	height: 60px;
+	background: var(--gradient);
+	padding: 10px 20px;
+	border-radius: 10px;
+	color: white;
+	display: flex;
+	align-items: center;
+}
+
+.lists-holder{
+	height: calc(100% - 130px);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.col-8{
+	width: 60%;
+	height: 100%;
+}
+
+.col-30{
+	width: calc(100% / 3);
+	text-align: center;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lists-heading{
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.list{
+	list-style-type: none;
+	padding: 0;
+}
+
+.list-item{
+	padding: 10px;
+	margin-bottom: 2px;
+	border-radius: 10px;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.list-item.active, .list-item:hover{
+	background: var(--gradient);
+	color: white;
+}
+
+.list-item button{
+	display: none;
+}
+
+.list-item:hover button{
+	display: block;
+}
+
+.todos-holder{
+	height: 100%;
+}
+
+.todos-title, .todo-input{
+	height: 60px;
+	background: var(--gradient);
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.todos-title{
+	border-radius: 10px 10px 0 0;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.btn-close{
+	border: none;
+	background-color: white;
+	border-radius: 4px;
+	padding: 4px 10px;
+	cursor: pointer;
+	transition: all 0.05s linear;
+}
+
+.btn-close:hover {
+	scale: 1.05;
+}
+
+.todos-body{
+	height: calc(100% - 120px);
+}
+
+.status-holder{
+	height: 50px;
+	border-radius: 0 0 10px 10px;
+	background: whitesmoke;
+	padding: 5px;
+}
+
+.status-holder .row{
+	height: 100%;
+}
+
+.col-30.active, .col-30:hover{
+	background: var(--gradient);
+	border-radius: 10px;
+	cursor: pointer;
+	color: white;
+}
+
+.todos{
+	height: calc(100% - 50px);
+	list-style-type: none;
+	padding: 10px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+
+.todo-item{
+	padding: 5px 0;
+	font-size: 14px;
+	font-weight: 500;
+	padding: 10px;
+	cursor: pointer;
+	display: flex;
+	flex: 1;
+}
+
+.todo-item:hover{
+	background: var(--gradient);
+	color: white;
+}
+
+.todo-item p{
+	flex: 3;
+}
+
+.todo-item .item-actions{
+	flex: 1;
+	display: none;
+	justify-content: center;
+	gap: 2px;
+}
+
+.todo-item:hover .item-actions{
+	display: inline-flex;
+}
+
+.todo-input{
+	display: flex;
+	align-items: center;
+}
+
+.todo-input form{
+	width: 100%;
+	display: flex;
+	flex: 1 1;
+}
+
+.todo-input form input{
+	flex: 2;
+	padding: 10px;
+	outline: none;
+	border: 2px solid transparent;
+	border-radius: 10px 0 0 10px;
+}
+
+.todo-input form input:focus{
+	border-color: blue;
+}
+
+
+.todo-input form button{
+	flex: 1;
+	outline: none;
+	border: 2px solid transparent;
+	border-radius: 0 10px 10px 0;
+	cursor: pointer;
+}
+
+.todo-input form button:hover{
+	border-color: blue;
+}
+
+
+.btn{
+	border: none;
+	outline: none;
+	font-size: 12px;
+	padding: 6px 10px;
+	color: white;
+	cursor: pointer;
+}
+
+.btn-done{
+	background: rgba(0, 255, 0, 0.5);
+}
+
+
+.btn-delete{
+	background: rgba(255, 0, 0, 0.5);
+}
+
+
+.complete{
+	color: red;
+}
